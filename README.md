@@ -4,7 +4,7 @@ A text-based social network project.
 Features included:
 - registering a profile, logging in
 - creating text-based posts
-- displaying your profile
+- displaying user profiles
 - following users to see their posts
 - editing your posted posts
 - liking and unliking posts
