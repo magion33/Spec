@@ -1,0 +1,34 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div id="posts">
+        <div id="profile">
+            <span class="circle"><img class="profile-pic" src="{{ profile.profile_picture.url }}"></span><h2 id="profile-name">{{ profile.username }}</h2>
+            <div id="follow-unfollow">
+                <button class="follow-unfollow-btn" id="follow-btn">Follow</button>
+                <button class="follow-unfollow-btn" id="unfollow-btn">Following</button>
+            </div>
+            <div id="profile-content">
+            <span id="follower-count">{{ followers_num }}</span><span class="stats">Followers</span>
+            <span id="following-count">{{ following_num }}</span><span class="stats">Following</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-links">
+                Log in or register a new account.
+                <div id="modal-login"><big>Log in</big></div>
+                <div id="modal-register"><big>Register</big></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script id="trick" src="{% static 'network/profile.js' %}">{{ user }}</script>
+{% endblock %}

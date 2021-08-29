@@ -1,0 +1,33 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div id="posts">
+        <h2 class="h2">Home</h2>
+        <div class="individual-post">
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <div id="new-text-wrapper">
+                <textarea id="new-text" spellcheck="false" rows="4" placeholder="Speculate..."></textarea>
+            </div>
+            <button type="submit" id="create-btn">Post</button>
+        </form>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-links">
+                Log in or register a new account.
+                <div id="modal-login"><big>Log in</big></div>
+                <div id="modal-register"><big>Register</big></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/index.js' %}"></script>
+{% endblock %}

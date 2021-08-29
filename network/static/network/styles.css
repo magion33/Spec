@@ -1,0 +1,446 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: Segoe UI, sans-serif;
+}
+/* nav bar */
+.navbar {
+    padding: 10px 2px 9px 2px;
+    display: block;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    max-height: 48px;
+    background-image: url("blur42.png");
+    background-size: 160% 200%;
+}
+
+/* nav bar elements */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+}
+#navbar-logo {
+    font-family: Verdana;
+    opacity: 0.85;
+    position: static;
+    min-width: 100px;
+    float: left;
+    text-align: center;
+    margin-right: 0.5vw;
+    margin-left: 40px;
+    padding-left: 1.5vw;
+    padding-top: 8px;
+    padding-bot: 0px;
+    transform: scale(1.9);
+}
+.nav-link {
+    color: #f2f2f2;
+    opacity: 0.5;
+    transform: scale(1);
+    transition: all 0.15s ease-in-out 0.0s;
+    padding: 13px 2vw 14px 2vw;
+}
+.nav-link:hover {
+    opacity: 0.8;
+    color: white;
+    transform: scale(1.15);
+    transition: all 0.15s ease-in-out 0.0s;
+}
+
+/* main page elements */
+.main {
+    margin-top: 85px;  /* IMPORTANT to avoid element overlay */
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.h2 {
+    padding-top: 21px;
+    padding-left: 12px;
+}
+#posts > p {
+    padding-top: 5px;
+    padding-left: 12px;
+}
+#posts {
+    margin-bottom: 5vh;
+}
+
+
+#profile-name {
+    float: left;
+}
+.circle {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: 1px solid lightgrey;
+    border-radius: 100%;
+    overflow: hidden;
+    display: inline-block;
+    margin: 5px 10px 15px -10px;
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+}
+#profile-content {
+    clear: left;
+}
+
+
+#new-text-wrapper {
+    margin: 10px 17px 0px 10px;
+}
+#new-text {
+    margin: 0;
+    padding 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.5em;
+    color: #484848;
+    font-family: Arial, sans serif;
+}
+.individual-post {
+    display:block;
+    padding: 10px;
+    padding-left: 15px;
+    margin-bottom: -1px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+}
+.individual-post:hover {
+    background-color: #F8F8F8;
+}
+.individual-post:hover * {
+    background-color: #F8F8F8;
+}
+#create-btn {
+    color: white;
+    font-weight: bold;
+    background-color: #F8F8F8;
+    padding: 5px 15px 5px 15px;
+    border: 0px solid #F8F8F8;
+    border-radius: 15px;
+    /*background-image: url("blur42.png");
+    opacity: 0.7;*/
+    background-color: #53848C;
+    cursor: pointer;
+}
+#create-btn:hover {
+    /*opacity: 0.9;*/
+    background-color: #1E616B;
+}
+.profile-link {
+    float: left;
+    padding-right: 5px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.profile-link:hover {
+    text-decoration: underline;
+}
+.time-string {
+    color: #909090;
+    font-size: 0.75em;
+    margin-top: 6px;
+    font-family: Arial, sans serif;
+}
+.text-wrap {
+    clear: left;
+    padding-top: 10px;
+}
+.post-text {
+    float: left;
+    margin-right: 5px;
+}
+.like-wrap {
+    clear: left;
+    padding: 10px 0px 0px 0px;
+}
+.like-btn {
+    float: left;
+    -webkit-text-stroke: 1px grey;
+    color: white;
+    padding: 2px 4px;
+    margin-right: 3px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.unlike-btn {
+    float: left;
+    -webkit-text-stroke: 1px red;
+    color: red;
+    padding: 2px 4px;
+    margin-right: 3px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.like-btn:hover {
+    background-color: #ffd6eb;
+    border-radius: 10px;
+}
+.unlike-btn:hover {
+    background-color: #ffd6eb;
+    border-radius: 10px;
+}
+.edit-btn {
+    float: left;
+    padding: 2px 4px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.edit-btn:hover {
+    background-color: #E0E0E0;
+    border-radius: 10px;
+}
+.edit-field {
+    outline: none;
+    width: 80vw;
+    height: 100px;
+    float: left;
+    resize: none;
+    font-size: 1em;
+    color: #484848;
+    font-family: Segoe UI, sans-serif;
+    border-color: lightgrey;
+    border-radius: 3px;
+}
+.submit-btn {
+    float: left;
+    font-size: 0.7em;
+    padding: 2px 4px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: #E0E0E0;
+    border-radius: 10px;
+}
+
+/* small screen responsiveness */
+@media only screen and (max-width: 600px) {
+.main {
+    padding-left: 0vw;
+    padding-right: 0vw;
+}
+.individual-post {
+    border-right: none;
+    border-left: none;
+    margin-right: 0px;
+    margin-left: 0px;
+}}
+
+/* Profile */
+#profile {
+    padding-left: 20px;
+}
+.stats {
+    color: grey;
+    padding-left: 5px;
+}
+#following-count {
+    margin-left: 8px;
+    font-weight: bold;
+}
+#follower-count {
+    font-weight: bold;
+}
+#profile-content {
+    margin-bottom: 26px;
+}
+#follow-unfollow {
+    padding-top: 26px;
+    margin-left: 50px;
+}
+#profile > h2 {
+    margin-right: 10px;
+}
+#follow-btn {
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    border: 0px solid #F8F8F8;
+    border-radius: 15px;
+    background-color: #6FA2AA;
+    opacity: 1;
+    cursor: pointer;
+}
+#follow-btn:hover {
+    background-color: #1E616B;
+}
+#unfollow-btn {
+    width: 90px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 4px 9px 4px 9px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+}
+#unfollow-btn:hover {
+    color: red;
+    background-color: #ffd6eb;
+    border-color: #ffd6eb;
+}
+
+/* Pagination */
+#previous-button {
+    float: left;
+    font-size: 3em;
+    cursor: pointer;
+    width: 70px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    padding-bottom: 6px;
+    margin-bottom: 2vh;
+    margin-top: 0px;
+}
+#next-button {
+    margin-left: -1px;
+    float: left;
+    font-size: 3em;
+    cursor: pointer;
+    width: 70px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    padding-bottom: 6px;
+    margin-bottom: 2vh;
+    margin-top: 0px;
+}
+#next-button:hover, #previous-button:hover {
+    background-color: #F8F8F8;
+}
+#next-button:disabled:hover, #previous-button:disabled:hover {
+    background-color: white;
+}
+
+/* The Modal (background) */
+.modal {
+    margin: 0;
+    padding: 0;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(128,128,128,0.7); /* Black w/ opacity */
+    overflow-y: hidden; /* prevent scrolling if viewport is too small */
+    overflow-x: hidden; /* prevent scrolling if viewport is too small */
+}
+/* Modal Content */
+.modal-content {
+    opacity: 0.98;
+    position:absolute;
+    background-color: #fefefe;
+    padding: 0px;
+    margin: 0 auto; /* centered */
+    left:50%;
+    top:50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 1px solid #989898;
+    border-radius: 15px;
+    width: 600px;
+    min-width: 150px;
+    height: 450px;
+    min-height: 150px;
+}
+.modal-links {
+    position:absolute;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+#modal-login, #modal-register {
+    text-align: center;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 25px;
+    margin: 10px auto;
+    padding-top: 6px;
+    padding-bottom: 9px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+#modal-login:hover, #modal-register:hover {
+    background-color: #F0F0F0;
+    cursor: pointer;
+}
+/* Freeze window when displaying modal - add this class to body, then remove*/
+.freeze-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* Login, Register styling */
+.form-style {
+    padding-left: 12px;
+}
+.form-control {
+    width: 40vw;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #D0D0D0;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+.form-control:focus {
+    outline-color: #1E616B;
+}
+@media only screen and (max-width: 600px) {
+.form-control {
+    width: 93.5vw;
+.form-style {
+    padding-left: 0px;
+}
+}}
+.login-register-btn {
+    width: 200px;
+    height: 35px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid #D0D0D0;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 11px;
+}
+.login-register-btn:hover {
+    background-color: #F0F0F0;
+}
+.form-style a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1E616B;
+}
+.form-style a:hover {
+    text-decoration: underline;
+}
