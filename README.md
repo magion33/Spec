@@ -14,4 +14,4 @@ Used stack:
 - Django and Python for backend
 - SQLite, Django models for database
 - JavaScript for UI/UX
-- CSS for responsiveness
+- CSS for styling and responsiveness
