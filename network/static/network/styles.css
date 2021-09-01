@@ -245,6 +245,24 @@ body {
     border-left: none;
     margin-right: 0px;
     margin-left: 0px;
+}
+#navbar-logo {
+    margin-right: -10vw;
+}
+.nav-link {
+    font-size: 0.9em;
+}}
+@media only screen and (max-width: 375px) {
+.nav-link {
+    font-size: 0.8em;
+    padding-top: 15px;
+}}
+@media only screen and (max-width: 320px) {
+#navbar-logo {
+    margin-right: -60px;
+}
+.nav-link {
+    font-size: 0.75em;
 }}
 
 /* Profile */
