@@ -123,8 +123,6 @@ def profile(request, username):
         return render(request, "network/not_found.html")
 
 
-# I need to account for not logged in user accessing http://127.0.0.1:8000/following
-# and all urls not existing like profile
 # Following page
 def following(request):
     if request.user.is_authenticated:
