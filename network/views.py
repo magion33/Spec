@@ -100,14 +100,14 @@ def likes(request, post_id):
     return JsonResponse([i.serialize() for i in likes_of_post], safe=False)
 
 
-# index page
+# Index page
 def index(request):
     return render(request, "network/index.html", {
         "posts": reversed(Post.objects.all())
     })
 
 
-# profile page
+# Profile page
 def profile(request, username):
     try:
         username = username.capitalize()
@@ -203,3 +203,4 @@ def register(request):
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "network/register.html")
+    
